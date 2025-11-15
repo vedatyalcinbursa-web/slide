@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otomatik Slayt Gösterisi</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Kaydırma çubuklarını gizle */
+            background-color: #f0f0f0; /* Opsiyonel arka plan rengi */
+        }
+        .slideshow-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        iframe {
+            /* Tarayıcı penceresinin tamamını kaplamasını sağlar */
+            width: 100%; 
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slideshow-container">
+        <iframe 
+            src="https://docs.google.com/presentation/d/e/2PACX-1vQN_NbbxT0Bgg21ejG9Ii8g3F6jcsUkoZHivJFGmgpjgPdoHUkRRuAGl-z6jESamQTu5h9157Q6qL8X/pubembed?start=true&loop=true&delayms=5000" 
+            frameborder="0" 
+            width="100%" 
+            height="100%" 
+            allowfullscreen="true" 
+            mozallowfullscreen="true" 
+            webkitallowfullscreen="true">
+        </iframe>
+    </div>
+
+</body>
+</html>
