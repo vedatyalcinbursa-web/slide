@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Uygulama Kartları</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --bg-color: #f0f3f8;
+            --card-bg: #ffffff;
+            --text-color: #1c2a44;
+            --hover-card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            color: var(--text-color);
+            font-weight: 700;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            max-width: 1400px;
+            width: 100%;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 30px 25px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-bottom: 4px solid transparent;
+        }
+
+        /* Kart Vurgusu */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 123, 255, 0.15);
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        /* İkon Çerçevesi ve Arka Planı */
+        .icon-wrapper {
+            width: 85px;
+            height: 85px;
+            background: linear-gradient(135deg, #e6f1ff 0%, #f0f3f8 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .card:hover .icon-wrapper {
+            background: linear-gradient(135deg, #007bff 0%, #00c6ff 100%);
+            transform: scale(1.1) rotate(5deg); /* Üzerine gelince hafif büyür ve döner */
+        }
+
+        .icon-wrapper i {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            transition: color 0.4s ease;
+        }
+
+        .card:hover .icon-wrapper i {
+            color: #ffffff; /* Üzerine gelince ikon beyaz olur */
+        }
+
+        .card .title-area {
+            flex-grow: 1;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 1.15rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            color: #6c757d;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .card:hover .card-footer {
+            color: var(--primary-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Okul Yönetim Portalı</h1>
+        <p>Tüm sistemlere tek tıkla erişin</p>
+    </header>
+
+    <div class="card-container">
+        <a href="https://naketrahmiyepalabiyikiho.pythonanywhere.com/" target="_blank" class="card">
+            <div class="icon-wrapper"><i class="fa-solid fa-clipboard-list"></i></div>
+            <div class="title-area"><h3>Anket Hazırlama</h3></div>
+            <div class="card-footer">Anket Oluştur →</div>
+        </a>
+
+        <a href="https://termaliho.pythonanywhere.com/" target="_blank" class="card">
+            <div class="icon-wrapper"><i class="fa-solid fa-user-plus"></i></div>
+            <div class="title-area"><h3>Öğrenci Kayıt / Nakil Formu</h3></div>
+            <div class="card-footer">Formu Doldur →</div>
+        </a>
+        
+        <a href="https://vedatyalcin.pythonanywhere.com/" target="_blank" class="card">
+            <div class="icon-wrapper"><i class="fa-solid fa-book-open-reader"></i></div>
+            <div class="title-area"><h3>Kütüphane Takip (Otomosyon) Programı</h3></div>
+            <div class="card-footer">Kütüphaneyi Yönet →</div>
+        </a>
+
+        <a href="https://lgstakip2026.pythonanywhere.com/" target="_blank" class="card">
+            <div class="icon-wrapper"><i class="fa-solid fa-compass"></i></div>
+            <div class="title-area"><h3>LGS Öğrenci Rehberlik Programı</h3></div>
+            <div class="card-footer">Yol Haritasını Çiz →</div>
+        </a>
+
+        <a href="https://dersprogrami.pythonanywhere.com/" target="_blank" class="card">
+            <div class="icon-wrapper"><i class="fa-solid fa-calendar-days"></i></div>
+            <div class="title-area"><h3>Ders Dağıtım Programı</h3></div>
+            <div class="card-footer">Planı Düzenle →</div>
+        </a>
+
+        <a href="https://toplantigundem.pythonanywhere.com/" target="_blank" class="card">
+            <div class="icon-wrapper"><i class="fa-solid fa-users-gear"></i></div>
+            <div class="title-area"><h3>Okul Aile Birliği / Toplantı Gündemi</h3></div>
+            <div class="card-footer">Gündem Oluştur →</div>
+        </a>
+
+        <a href="https://vedatyalcinbursa-web.github.io/sinavsonuc/" target="_blank" class="card">
+            <div class="icon-wrapper"><i class="fa-solid fa-square-poll-vertical"></i></div>
+            <div class="title-area"><h3>Sınav Sonuç Duyurusu</h3></div>
+            <div class="card-footer">Sonuçları Gör →</div>
+        </a>
+
+        <a href="https://akillitahta.pythonanywhere.com/giris" target="_blank" class="card">
+            <div class="icon-wrapper"><i class="fa-solid fa-display"></i></div>
+            <div class="title-area"><h3>Akıllı Tahta Kilit Programı</h3></div>
+            <div class="card-footer">Akıllı Tahtaları Yönet →</div>
+        </a>
+
+        <a href="https://vedatyalcinbursa-web.github.io/slide/" target="_blank" class="card">
+            <div class="icon-wrapper"><i class="fa-solid fa-person-chalkboard"></i></div>
+            <div class="title-area"><h3>Okul Tanıtım Sunumu</h3></div>
+            <div class="card-footer">Sunumu İzle →</div>
+        </a>
+
+        <a href="https://dogrudantemin.pythonanywhere.com/" target="_blank" class="card">
+            <div class="icon-wrapper"><i class="fa-solid fa-cart-shopping"></i></div>
+            <div class="title-area"><h3>Doğrudan Temin (Muhasebe) Programı</h3></div>
+            <div class="card-footer">Alım Başlat →</div>
+        </a>
+
+        <a href="https://naketrahmiyepalabiyikiho.pythonanywhere.com/sinav-analiz" target="_blank" class="card">
+            <div class="icon-wrapper"><i class="fa-solid fa-chart-pie"></i></div>
+            <div class="title-area"><h3>Sınav Analiz Programı</h3></div>
+            <div class="card-footer">Verileri İncele →</div>
+        </a>
+
+        <a href="https://otodergi.streamlit.app/" target="_blank" class="card">
+            <div class="icon-wrapper"><i class="fa-solid fa-newspaper"></i></div>
+            <div class="title-area"><h3>Otomatik Dergi Hazırlama</h3></div>
+            <div class="card-footer">Dergiyi Yayınla →</div>
+        </a>
+
+        <a href="https://vedatyalcinn.pythonanywhere.com/defter" target="_blank" class="card">
+            <div class="icon-wrapper"><i class="fa-solid fa-address-book"></i></div>
+            <div class="title-area"><h3>Ziyaretçi Defteri</h3></div>
+            <div class="card-footer">Defteri Oku/Yaz →</div>
+        </a>
+    </div>
+
+</body>
+</html>
